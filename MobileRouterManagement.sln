@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement.Core", "MobileRouterManagement.Core\MobileRouterManagement.Core.csproj", "{6192B074-870B-4A5B-B6CC-6996DD3B1576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement", "MobileRouterManagement\MobileRouterManagement.csproj", "{969AAFE3-D3D1-4864-B9D1-7AF816864602}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.Build.0 = Release|Any CPU
+		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
