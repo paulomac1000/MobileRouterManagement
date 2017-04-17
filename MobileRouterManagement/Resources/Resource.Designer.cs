@@ -57,11 +57,39 @@ namespace MobileRouterManagement
 			}
 		}
 		
+		public partial class Id
+		{
+			
+			// aapt resource value: 0x7f050001
+			public const int ipEditText = 2131034113;
+			
+			// aapt resource value: 0x7f050004
+			public const int loginButton = 2131034116;
+			
+			// aapt resource value: 0x7f050002
+			public const int loginEditText = 2131034114;
+			
+			// aapt resource value: 0x7f050000
+			public const int logoImageView = 2131034112;
+			
+			// aapt resource value: 0x7f050003
+			public const int passwordEditText = 2131034115;
+			
+			static Id()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Id()
+			{
+			}
+		}
+		
 		public partial class Layout
 		{
 			
 			// aapt resource value: 0x7f030000
-			public const int Main = 2130903040;
+			public const int Login = 2130903040;
 			
 			static Layout()
 			{
@@ -76,11 +104,8 @@ namespace MobileRouterManagement
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7f040001
-			public const int ApplicationName = 2130968577;
-			
 			// aapt resource value: 0x7f040000
-			public const int Hello = 2130968576;
+			public const int ApplicationName = 2130968576;
 			
 			static String()
 			{
