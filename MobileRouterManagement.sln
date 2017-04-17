@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement.Core", "MobileRouterManagement.Core\MobileRouterManagement.Core.csproj", "{6192B074-870B-4A5B-B6CC-6996DD3B1576}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement.View", "MobileRouterManagement.View\MobileRouterManagement.View.csproj", "{969AAFE3-D3D1-4864-B9D1-7AF816864602}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement", "MobileRouterManagement\MobileRouterManagement.csproj", "{969AAFE3-D3D1-4864-B9D1-7AF816864602}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{378853F8-332C-4AB7-BC6C-685B33859542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement.TestCore", "MobileRouterManagement.TestCore\MobileRouterManagement.TestCore.csproj", "{656D8035-8726-413F-9E4D-66863BF7D375}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileRouterManagement.Core", "MobileRouterManagement.Core\MobileRouterManagement.Core.csproj", "{0264387D-3CE4-4236-A919-0E5B3CA840FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,18 +17,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6192B074-870B-4A5B-B6CC-6996DD3B1576}.Release|Any CPU.Build.0 = Release|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.Build.0 = Release|Any CPU
 		{969AAFE3-D3D1-4864-B9D1-7AF816864602}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Release|Any CPU.Build.0 = Release|Any CPU
+		{656D8035-8726-413F-9E4D-66863BF7D375}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{0264387D-3CE4-4236-A919-0E5B3CA840FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0264387D-3CE4-4236-A919-0E5B3CA840FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0264387D-3CE4-4236-A919-0E5B3CA840FE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{0264387D-3CE4-4236-A919-0E5B3CA840FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0264387D-3CE4-4236-A919-0E5B3CA840FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{656D8035-8726-413F-9E4D-66863BF7D375} = {378853F8-332C-4AB7-BC6C-685B33859542}
 	EndGlobalSection
 EndGlobal

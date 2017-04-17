@@ -9,9 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("MobileRouterManagement.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("MobileRouterManagement.Views.Resource", IsApplication=true)]
 
-namespace MobileRouterManagement
+namespace MobileRouterManagement.Views
 {
 	
 	
@@ -26,6 +26,8 @@ namespace MobileRouterManagement
 		
 		public static void UpdateIdValues()
 		{
+			global::MobileRouterManagement.Core.Resource.String.ApplicationName = global::MobileRouterManagement.Views.Resource.String.ApplicationName;
+			global::MobileRouterManagement.Core.Resource.String.Hello = global::MobileRouterManagement.Views.Resource.String.Hello;
 		}
 		
 		public partial class Attribute
@@ -46,6 +48,9 @@ namespace MobileRouterManagement
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int Logo = 2130837505;
 			
 			static Drawable()
 			{
@@ -72,8 +77,17 @@ namespace MobileRouterManagement
 			// aapt resource value: 0x7f050000
 			public const int logoImageView = 2131034112;
 			
+			// aapt resource value: 0x7f050007
+			public const int menuListView = 2131034119;
+			
 			// aapt resource value: 0x7f050003
 			public const int passwordEditText = 2131034115;
+			
+			// aapt resource value: 0x7f050005
+			public const int saveButton = 2131034117;
+			
+			// aapt resource value: 0x7f050006
+			public const int savedAccesDatasExpandlableListView = 2131034118;
 			
 			static Id()
 			{
@@ -91,6 +105,9 @@ namespace MobileRouterManagement
 			// aapt resource value: 0x7f030000
 			public const int Login = 2130903040;
 			
+			// aapt resource value: 0x7f030001
+			public const int Menu = 2130903041;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
@@ -104,8 +121,11 @@ namespace MobileRouterManagement
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040001
+			public const int ApplicationName = 2130968577;
+			
 			// aapt resource value: 0x7f040000
-			public const int ApplicationName = 2130968576;
+			public const int Hello = 2130968576;
 			
 			static String()
 			{
