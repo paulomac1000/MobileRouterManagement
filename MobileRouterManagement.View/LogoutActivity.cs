@@ -49,12 +49,12 @@ namespace MobileRouterManagement.Views
 
         private void loginAgainButton_Click(object sender, EventArgs e)
         {
-            StartActivity(typeof(MenuActivity));
+            StartActivity(typeof(LoginActivity));
         }
 
         private void closeButton_Click(object sender, EventArgs e)
         {
-            System.Environment.Exit(0);
+            Process.KillProcess(Process.MyPid());
         }
     }
 }
