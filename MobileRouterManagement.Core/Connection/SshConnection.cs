@@ -94,6 +94,11 @@ namespace MobileRouterManagement.Core.Connection
             return answer;
         }
 
+        public static void Disconnect()
+        {
+            sshclient.Disconnect();
+        }
+
         #region private methods
 
         private static void initializeConnection()

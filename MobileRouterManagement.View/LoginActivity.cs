@@ -1,10 +1,13 @@
 ﻿using System;
 using System.Net.NetworkInformation;
+using System.Threading;
+using System.Threading.Tasks;
 using Android.App;
-using Android.Content;
 using Android.OS;
+using Android.Views;
 using Android.Widget;
 using MobileRouterManagement.Core.Connection;
+using Exception = System.Exception;
 
 namespace MobileRouterManagement.Views
 {
@@ -19,6 +22,7 @@ namespace MobileRouterManagement.Views
         private EditText loginEditText;
         private EditText passwordEditText;
         private Button loginButton;
+        private View loadingPanel;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -38,6 +42,13 @@ namespace MobileRouterManagement.Views
             loginEditText = FindViewById<EditText>(Resource.Id.loginEditText);
             passwordEditText = FindViewById<EditText>(Resource.Id.passwordEditText);
             loginButton = FindViewById<Button>(Resource.Id.loginButton);
+            loadingPanel = FindViewById(Resource.Id.loadingPanel);
+        }
+
+        private void bindData()
+        {
+            logoImageView.SetImageResource(Resource.Drawable.Logo);
+            loadingPanel.Visibility = ViewStates.Invisible;
         }
 
         private void handleEvents()
@@ -45,43 +56,54 @@ namespace MobileRouterManagement.Views
             loginButton.Click += loginButton_Click;
         }
 
-        private void bindData()
-        {
-            logoImageView.SetImageResource(Resource.Drawable.Logo);
-        }
-
-        private void loginButton_Click(object sender, EventArgs e)
+        private async void loginButton_Click(object sender, EventArgs e)
         {
             //TODO check:
             //ip by regex (possible port!)
             //if username is typed
             //password not have to be typed
 
-            //TODO find how show below toast BEFORE Connect method is execuded
+            loadingPanel.Visibility = ViewStates.Visible;
             Toast.MakeText(this, $"Connecting...", ToastLength.Long).Show();
-
-            //checking adress is neceserry because is faster than try to connect to bad IP
-            using (var ping = new Ping())
-            {
-                if (ping.Send(ipEditText.Text).Status != IPStatus.Success)
-                {
-                    Toast.MakeText(this, "Host is unreachable", ToastLength.Long).Show();
-                    return;
-                }
-            }
 
             try
             {
-                SshConnection.Connect(ipEditText.Text, loginEditText.Text, passwordEditText.Text);
+                await tryConnect();
+                StartActivity(typeof(MenuActivity));
             }
-            catch (Exception ex)
+            catch (Exception exception)
             {
-                Toast.MakeText(this, $"Can not connect to router. {ex.Message}", ToastLength.Long).Show();
-                return;
+                Toast.MakeText(this, exception.Message, ToastLength.Long).Show();
             }
+            finally
+            {
+                loadingPanel.Visibility = ViewStates.Invisible;
+            }
+        }
 
-            var intent = new Intent(this, typeof(MenuActivity));
-            StartActivity(intent);
+        private async Task tryConnect()
+        {
+            await Task.Run(() => {
+                //checking adress is neceserry because is faster than try to connect to bad IP
+                using (var ping = new Ping())
+                {
+                    if (ping.Send(ipEditText.Text).Status != IPStatus.Success)
+                    {
+                        throw new Exception("Host is unreachable");
+                    }
+                }
+
+                try
+                {
+                    SshConnection.Connect(ipEditText.Text, loginEditText.Text, passwordEditText.Text);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception($"Can not connect to router. {ex.Message}");
+                }
+
+                StartActivity(typeof(MenuActivity));
+            });
         }
     }
 }
