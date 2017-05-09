@@ -52,6 +52,7 @@
   <ItemGroup>
     <Compile Include="Connection\SshConnection.cs" />
     <Compile Include="Model\RouterAccesData.cs" />
+    <Compile Include="Model\Wireless.cs" />
     <Compile Include="Repository\RouterAccesDataRepository.cs" />
     <Compile Include="Resources\Resource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

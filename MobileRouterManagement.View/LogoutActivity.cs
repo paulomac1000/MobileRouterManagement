@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Android.App;
-using Android.Content;
+﻿using Android.App;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
 using Android.Widget;
 using MobileRouterManagement.Core.Connection;
+using System;
 
 namespace MobileRouterManagement.Views
 {
@@ -29,6 +22,11 @@ namespace MobileRouterManagement.Views
             findViewsWith();
             bindData();
             handleEvents();
+        }
+
+        public override void OnBackPressed()
+        {
+            Process.KillProcess(Process.MyPid());
         }
 
         private void findViewsWith()

@@ -22,14 +22,43 @@ namespace MobileRouterManagement.Views
             menuListView.ItemClick += MenuItems_ItemClick;
         }
 
+        public override void OnBackPressed(){}
+
         private void MenuItems_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            Toast.MakeText(this, menuItems[e.Position], ToastLength.Short).Show();
+            var position = (MenuItems)e.Position;
+            switch (position)
+            {
+                case MenuItems.Status:
+                    Toast.MakeText(this, "Function is not implemented yet.", ToastLength.Short).Show();
+                    break;
 
-            var assembly = typeof(MenuActivity).Assembly;
-            var activityName = $"MobileRouterManagement.Views.{menuItems[e.Position]}Activity";
-            var type = assembly.GetType(activityName);
-            StartActivity(type);
+                case MenuItems.Wireless:
+                    StartActivity(typeof(ShowWirelessActivity));
+                    break;
+
+                case MenuItems.DHCP:
+                    Toast.MakeText(this, "Function is not implemented yet.", ToastLength.Short).Show();
+                    break;
+
+                case MenuItems.Firewall:
+                    Toast.MakeText(this, "Function is not implemented yet.", ToastLength.Short).Show();
+                    break;
+
+                case MenuItems.Logs:
+                    Toast.MakeText(this, "Function is not implemented yet.", ToastLength.Short).Show();
+                    break;
+
+                case MenuItems.Logout:
+                    StartActivity(typeof(LogoutActivity));
+                    break;
+
+                default:
+                    Toast.MakeText(this, "Function is not recognized.", ToastLength.Short).Show();
+                    break;
+            }
+
+            Finish();
         }
     }
 
