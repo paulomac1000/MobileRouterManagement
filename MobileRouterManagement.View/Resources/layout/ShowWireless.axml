@@ -5,7 +5,8 @@
     android:layout_height="fill_parent">
     <TableRow
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:paddingTop="20dp">
         <TextView
             android:text="SSID"
             android:textAppearance="?android:attr/textAppearanceMedium"
@@ -143,11 +144,28 @@
             android:paddingBottom="20dp"
             android:paddingLeft="20dp" />
     </TableRow>
-    <Button
-        android:text="Edit"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/editWirelessButton"
-        android:gravity="center"
-        android:paddingBottom="20dp" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+          <Button
+            android:text="Back"
+            android:layout_width="0dip"
+            android:layout_weight=".5"
+            android:layout_height="wrap_content"
+            android:id="@+id/exitShowWirelessButton"
+            android:gravity="center"
+            android:paddingBottom="20dp" />
+            <Button
+                android:text="Edit"
+                android:layout_width="0dip"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:id="@+id/editWirelessButton"
+                android:gravity="center"
+                android:paddingBottom="20dp" />
+        </TableRow>
+    </TableLayout>
 </TableLayout>

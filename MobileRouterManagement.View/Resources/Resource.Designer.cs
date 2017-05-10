@@ -65,8 +65,8 @@ namespace MobileRouterManagement.Views
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f050008
-			public const int backWirelessButton = 2131034120;
+			// aapt resource value: 0x7f050007
+			public const int backWirelessButton = 2131034119;
 			
 			// aapt resource value: 0x7f050003
 			public const int channelSpinner = 2131034115;
@@ -83,14 +83,17 @@ namespace MobileRouterManagement.Views
 			// aapt resource value: 0x7f050019
 			public const int disabledTextView = 2131034137;
 			
-			// aapt resource value: 0x7f05001a
-			public const int editWirelessButton = 2131034138;
+			// aapt resource value: 0x7f05001b
+			public const int editWirelessButton = 2131034139;
 			
 			// aapt resource value: 0x7f050002
 			public const int encryptionSpinner = 2131034114;
 			
 			// aapt resource value: 0x7f050015
 			public const int encryptionTextView = 2131034133;
+			
+			// aapt resource value: 0x7f05001a
+			public const int exitShowWirelessButton = 2131034138;
 			
 			// aapt resource value: 0x7f05000a
 			public const int ipEditText = 2131034122;
@@ -107,8 +110,8 @@ namespace MobileRouterManagement.Views
 			// aapt resource value: 0x7f050010
 			public const int loginAgainButton = 2131034128;
 			
-			// aapt resource value: 0x7f05000c
-			public const int loginButton = 2131034124;
+			// aapt resource value: 0x7f05000d
+			public const int loginButton = 2131034125;
 			
 			// aapt resource value: 0x7f050009
 			public const int logoImageView = 2131034121;
@@ -131,11 +134,11 @@ namespace MobileRouterManagement.Views
 			// aapt resource value: 0x7f05000b
 			public const int passwordEditText = 2131034123;
 			
-			// aapt resource value: 0x7f05000d
-			public const int saveButton = 2131034125;
+			// aapt resource value: 0x7f05000c
+			public const int saveButton = 2131034124;
 			
-			// aapt resource value: 0x7f050007
-			public const int saveWirelessButton = 2131034119;
+			// aapt resource value: 0x7f050008
+			public const int saveWirelessButton = 2131034120;
 			
 			// aapt resource value: 0x7f05000f
 			public const int savedAccesDatasExpandlableListView = 2131034127;

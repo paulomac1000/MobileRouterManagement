@@ -4,8 +4,6 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
-using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading;
 
@@ -26,14 +24,7 @@ namespace MobileRouterManagement.Core.Connection
         {
             sshclient = new SshClient(adresIp, username, password);
 
-            try
-            {
-                sshclient.Connect();
-            }
-            catch
-            {
-                return;
-            }
+            sshclient.Connect();
 
             shellStream = sshclient.CreateShellStream("cmd", 80, 24, 800, 600, 1024);
 
@@ -67,7 +58,7 @@ namespace MobileRouterManagement.Core.Connection
         {
             var answer = Send_CustomCommand("uci show wireless");
 
-            var wirelessConfiguratrion =  parseAnswerToDictionary(answer);
+            var wirelessConfiguratrion = parseAnswerToDictionary(answer);
 
             var wireless = new Wireless
             {

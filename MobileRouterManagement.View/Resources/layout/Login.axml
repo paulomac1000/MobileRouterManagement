@@ -38,20 +38,30 @@
         android:layout_height="wrap_content"
         android:id="@+id/passwordEditText"
         android:gravity="center" />
-    <Button
-        android:text="Login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginButton"
-        android:gravity="center"
-        android:imeOptions="actionDone"
-        android:singleLine="true" />
-    <Button
-        android:text="Save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/saveButton"
-        android:gravity="center" />
+    <TableLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <Button
+                android:text="Save"
+                android:layout_width="0dip"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:id="@+id/saveButton"
+                android:gravity="center" />
+            <Button
+                android:text="Login"
+                android:layout_width="0dip"
+                android:layout_weight=".5"
+                android:layout_height="wrap_content"
+                android:id="@+id/loginButton"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:singleLine="true" />
+        </TableRow>
+    </TableLayout>
     <RelativeLayout
         android:id="@+id/loadingPanel"
         android:layout_width="match_parent"

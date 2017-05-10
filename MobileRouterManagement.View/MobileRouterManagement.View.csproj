@@ -50,6 +50,7 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EditWirelessActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="LogoutActivity.cs" />
     <Compile Include="MenuActivity.cs" />

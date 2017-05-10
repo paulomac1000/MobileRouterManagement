@@ -17,6 +17,7 @@ namespace MobileRouterManagement.Views
         private TextView networkTextView;
         private TextView disabledTextView;
         private Button editWirelessButton;
+        private Button exitShowWirelessButton;
 
         protected override void OnCreate(Bundle bundle)
         {
@@ -44,6 +45,7 @@ namespace MobileRouterManagement.Views
             networkTextView = FindViewById<TextView>(Resource.Id.networkTextView);
             disabledTextView = FindViewById<TextView>(Resource.Id.disabledTextView);
             editWirelessButton = FindViewById<Button>(Resource.Id.editWirelessButton);
+            exitShowWirelessButton = FindViewById<Button>(Resource.Id.exitShowWirelessButton);
         }
 
         private void bindData()
@@ -62,11 +64,18 @@ namespace MobileRouterManagement.Views
         private void handleEvents()
         {
             editWirelessButton.Click += editWireless_Click;
+            exitShowWirelessButton.Click += exitShowWireless_Click;
         }
 
         private void editWireless_Click(object sender, EventArgs e)
         {
-            Toast.MakeText(this, "EDIT", ToastLength.Short).Show();
+            Toast.MakeText(this, "Change this setting cause router disconnection.", ToastLength.Short).Show();
+            StartActivity(typeof(EditWirelessActivity));
+        }
+
+        private void exitShowWireless_Click(object sender, EventArgs e)
+        {
+            Finish();
         }
     }
 }
