@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Name"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleNameEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Source mac "
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleSourceMacEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Source ip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleSourceIpEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Source port"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleSourcePortEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Dest ip"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleDestinationIpEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Dest port"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <EditText
+        android:id="@+id/addRuleDestinationPortEditText"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableRow
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent"
+      android:paddingTop="20dp">
+    <TextView
+        android:text="Enabled?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+    <CheckBox
+        android:id="@+id/addRuleEnabledCheckBox"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingBottom="20dp"
+        android:paddingLeft="20dp" />
+  </TableRow>
+  <TableLayout
+      android:layout_width="fill_parent"
+      android:layout_height="fill_parent">
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+      <Button
+        android:text="Back"
+        android:layout_width="0dip"
+        android:layout_weight=".5"
+        android:layout_height="wrap_content"
+        android:id="@+id/exitEditRuleButton"
+        android:gravity="center"
+        android:paddingBottom="20dp" />
+      <Button
+          android:text="Save"
+          android:layout_width="0dip"
+          android:layout_weight=".5"
+          android:layout_height="wrap_content"
+          android:id="@+id/saveModifedRuleButton"
+          android:gravity="center"
+          android:paddingBottom="20dp" />
+    </TableRow>
+  </TableLayout>
+</TableLayout>

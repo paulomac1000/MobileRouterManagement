@@ -32,6 +32,7 @@ namespace MobileRouterManagement.Views
 
         public override void OnBackPressed()
         {
+            StartActivity(typeof(MenuActivity));
             Finish();
         }
 
@@ -75,6 +76,7 @@ namespace MobileRouterManagement.Views
 
         private void exitShowWireless_Click(object sender, EventArgs e)
         {
+            StartActivity(typeof(MenuActivity));
             Finish();
         }
     }

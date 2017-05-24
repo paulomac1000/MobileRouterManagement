@@ -50,16 +50,19 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddFirewallRuleActivity.cs" />
+    <Compile Include="EditFirewallRuleActivity.cs" />
     <Compile Include="EditWirelessActivity.cs" />
+    <Compile Include="FirewallActivity.cs" />
     <Compile Include="LoginActivity.cs" />
     <Compile Include="LogoutActivity.cs" />
     <Compile Include="MenuActivity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="ShowFirewallRule.cs" />
     <Compile Include="ShowWirelessActivity.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="GettingStarted.Xamarin" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <AndroidResource Include="Resources\layout\Menu.axml">
@@ -72,6 +75,14 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\EditWireless.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Firewall.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\ShowFirewallRule.axml" />
+    <AndroidResource Include="Resources\layout\EditFirewallRule.axml" />
+    <AndroidResource Include="Resources\layout\AddFirewallRule.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

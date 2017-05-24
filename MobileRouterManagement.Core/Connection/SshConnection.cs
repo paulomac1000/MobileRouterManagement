@@ -35,7 +35,7 @@ namespace MobileRouterManagement.Core.Connection
         {
             var reader = new StreamReader(shellStream);
             reader.ReadToEnd(); //clear stream from old data
-            writeStream(customCmd);
+            WriteStream(customCmd);
 
             var strAnswer = new StringBuilder();
             strAnswer.AppendLine(reader.ReadToEnd());
@@ -58,7 +58,7 @@ namespace MobileRouterManagement.Core.Connection
         {
             var answer = Send_CustomCommand("uci show wireless");
 
-            var wirelessConfiguratrion = parseAnswerToDictionary(answer);
+            var wirelessConfiguratrion = ParseAnswerToDictionary(answer);
 
             var wireless = new Wireless
             {
@@ -68,7 +68,7 @@ namespace MobileRouterManagement.Core.Connection
                 Encryption = wirelessConfiguratrion.FirstOrDefault(c => c.Key.Contains(".encryption")).Value,
                 Key = wirelessConfiguratrion.FirstOrDefault(c => c.Key.Contains(".key")).Value,
                 Mode = wirelessConfiguratrion.FirstOrDefault(c => c.Key.Contains(".mode")).Value,
-                Network = wirelessConfiguratrion.FirstOrDefault(c => c.Key.Contains(".network")).Value,
+                Network = wirelessConfiguratrion.FirstOrDefault(c => c.Key.Contains(".network")).Value
             };
 
             return wireless;
@@ -76,20 +76,20 @@ namespace MobileRouterManagement.Core.Connection
 
         public static void Send_SaveWireless(Wireless wireless)
         {
-            writeStream($"uci set wireless.@wifi-device[0].disabled={Convert.ToInt32(wireless.Disabled)}");
-            writeStream($"uci set wireless.@wifi-device[0].channel={wireless.Channel}");
-            writeStream($"uci set wireless.@wifi-iface[0].ssid={wireless.Ssid}");
-            writeStream($"uci set wireless.@wifi-iface[0].encryption={wireless.Encryption}");
-            writeStream($"uci set wireless.@wifi-iface[0].key={wireless.Key}");
-            writeStream($"uci set wireless.@wifi-iface[0].mode={wireless.Mode}");
-            writeStream($"uci set wireless.@wifi-iface[0].network={wireless.Network}");
+            WriteStream($"uci set wireless.@wifi-device[0].disabled={Convert.ToInt32(wireless.Disabled)}");
+            WriteStream($"uci set wireless.@wifi-device[0].channel={wireless.Channel}");
+            WriteStream($"uci set wireless.@wifi-iface[0].ssid={wireless.Ssid}");
+            WriteStream($"uci set wireless.@wifi-iface[0].encryption={wireless.Encryption}");
+            WriteStream($"uci set wireless.@wifi-iface[0].key={wireless.Key}");
+            WriteStream($"uci set wireless.@wifi-iface[0].mode={wireless.Mode}");
+            WriteStream($"uci set wireless.@wifi-iface[0].network={wireless.Network}");
             if (wireless.Network == "wan")
             {
-                writeStream($"uci set network.wan=interface");
-                writeStream($"uci set network.wan.proto=dhcp");
+                WriteStream($"uci set network.wan=interface");
+                WriteStream($"uci set network.wan.proto=dhcp");
             }
 
-            writeStream($"uci commit");
+            WriteStream($"uci commit");
             Send_CustomCommand($"wifi");
             Thread.Sleep(5000);
         }
@@ -101,7 +101,7 @@ namespace MobileRouterManagement.Core.Connection
 
         #region private methods
 
-        private static Dictionary<string, string> parseAnswerToDictionary(string answer)
+        public static Dictionary<string, string> ParseAnswerToDictionary(string answer)
         {
             //remove first line - command sent to router
             answer = answer.Substring(answer.IndexOf(Environment.NewLine, StringComparison.Ordinal) + 1);
@@ -121,7 +121,7 @@ namespace MobileRouterManagement.Core.Connection
             return entriesAsDictionary;
         }
 
-        private static void writeStream(string cmd)
+        public static void WriteStream(string cmd)
         {
             var writer = new StreamWriter(shellStream) { AutoFlush = true };
             writer.WriteLine(cmd);

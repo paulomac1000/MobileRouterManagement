@@ -50,9 +50,12 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connection\FirewallConnection.cs" />
     <Compile Include="Connection\SshConnection.cs" />
-    <Compile Include="Model\RouterAccesData.cs" />
-    <Compile Include="Model\Wireless.cs" />
+    <Compile Include="Models\FirewallRule.cs" />
+    <Compile Include="Models\RouterAccesData.cs" />
+    <Compile Include="Models\ViewModels\AddFirewallRuleViewModel.cs" />
+    <Compile Include="Models\Wireless.cs" />
     <Compile Include="Repository\RouterAccesDataRepository.cs" />
     <Compile Include="Resources\Resource.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

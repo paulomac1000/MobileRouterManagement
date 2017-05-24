@@ -35,6 +35,7 @@ namespace MobileRouterManagement.Views
 
         public override void OnBackPressed()
         {
+            StartActivity(typeof(ShowWirelessActivity));
             Finish();
         }
 

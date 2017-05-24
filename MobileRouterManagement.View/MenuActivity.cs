@@ -42,7 +42,7 @@ namespace MobileRouterManagement.Views
                     break;
 
                 case MenuItems.Firewall:
-                    Toast.MakeText(this, "Function is not implemented yet.", ToastLength.Short).Show();
+                    StartActivity(typeof(FirewallActivity));
                     break;
 
                 case MenuItems.Logs:
